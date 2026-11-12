@@ -27,3 +27,6 @@ checkBtn.addEventListener("click", () => {
             " | COMPATIBILITY NOT VERIFIED";
     }
 });
+activateBtn.addEventListener("click", () => {
+  alert("LION CRACK INTERFACE READY!");
+});
