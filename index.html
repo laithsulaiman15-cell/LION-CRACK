@@ -4,40 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LION CRACK | PS4 Host</title>
+    <title>LION CRACK | Console Research Host</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <main class="hero">
         <div class="content">
-            <h1>LION CRACK</h1>
-            <p>PS4 EXPLOIT • RESEARCH • HOST</p>
 
-            <button id="activateBtn">ACTIVATE</button>
+            <h1>LION CRACK</h1>
+            <p>CONSOLE EXPLOIT • SECURITY RESEARCH</p>
+
+            <section class="firmware-check">
+                <h2>DEVICE DETECTION</h2>
+                <div id="deviceResult">DETECTING DEVICE...</div>
+                <div id="browserResult"></div>
+            </section>
+
+            <button id="activateBtn" type="button">
+                ACTIVATE
+            </button>
 
             <div id="status">SYSTEM READY</div>
 
             <section class="firmware-check">
-                <h2>FIRMWARE DETECTOR</h2>
-                <p>Enter your PS4 system software version</p>
+                <h2>SYSTEM VERIFICATION</h2>
+
+                <div id="systemResult">
+                    WAITING FOR DEVICE DETECTION
+                </div>
+
+                <label for="firmwareInput">
+                    System Software Version
+                </label>
 
                 <input
                     id="firmwareInput"
                     type="text"
-                    placeholder="Example: 14.02"
+                    placeholder="Example: 14.22"
                 >
 
-                <button id="checkBtn">CHECK FIRMWARE</button>
+                <button id="checkBtn" type="button">
+                    CHECK SYSTEM
+                </button>
 
                 <div id="firmwareResult">
-                    WAITING FOR INPUT
+                    WAITING FOR VERIFICATION
                 </div>
             </section>
 
             <footer>
                 A LIONS GAME STUDIOS PROJECT
             </footer>
+
         </div>
     </main>
 
