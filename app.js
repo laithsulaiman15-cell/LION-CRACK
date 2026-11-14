@@ -38,24 +38,24 @@ systemResult.textContent =
     "Device detected. Firmware verification required.";
 
 activateBtn.addEventListener("click", () => {
-    status.textContent = "LION CRACK RESEARCH CHECK STARTED";
-
-    firmwareResult.textContent =
-        "DEVICE: " + detectedDevice +
-        " | EXPLOIT COMPATIBILITY NOT VERIFIED";
-});
-
-checkBtn.addEventListener("click", () => {
     const version = firmwareInput.value.trim();
 
     if (!/^\d+\.\d{1,2}$/.test(version)) {
+        firmwareResult.textContent = "INVALID SYSTEM VERSION";
+        return;
+    }
+
+    if (detectedDevice !== "PS4" || version !== "14.02") {
         firmwareResult.textContent =
-            "INVALID SYSTEM VERSION FORMAT";
+            "DEVICE OR VERSION NOT MATCHED - COMPATIBILITY NOT VERIFIED";
         return;
     }
 
     firmwareResult.textContent =
-        "DEVICE: " + detectedDevice +
-        " | SYSTEM VERSION: " + version +
-        " | COMPATIBILITY: NOT VERIFIED";
+        "VERSION CHECK PASSED - RESEARCH FILE DOWNLOAD";
+
+    const link = document.createElement("a");
+    link.href = "https://drive.google.com/uc?export=download&id=1MmE750py3kszHeqvpVFvaOYhPcvy-2-R";
+    link.download = "kernel_1402.bin";
+    link.click();
 });
