@@ -14,11 +14,10 @@ body {
 
 .hero {
     min-height: 100vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.65)),
-        url("background.png") center center / cover no-repeat;
+    background: url("background.png") center top / contain no-repeat;
+    background-color: #05070d;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     padding: 30px;
@@ -27,50 +26,68 @@ body {
 .content {
     width: 100%;
     max-width: 900px;
+    margin-top: 75vh;
 }
 
-h1 {
-    font-size: clamp(45px, 8vw, 95px);
-    font-weight: 900;
-    letter-spacing: 5px;
-    color: #fff;
-    text-shadow: 0 0 20px #e00020;
+.firmware-check,
+.kernel-section {
+    margin: 25px auto;
+    padding: 20px;
+    background: #080d18;
+    border: 1px solid #168cff;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #66caff;
+    margin-bottom: 15px;
 }
 
 p {
     margin-top: 12px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color: #d7eaff;
 }
 
-#activateBtn {
-    margin-top: 280px;
-    padding: 20px 65px;
-    font-size: 25px;
-    font-weight: bold;
+input {
+    display: block;
+    margin: 15px auto;
+    padding: 12px;
+    width: 90%;
+    max-width: 300px;
+}
+
+button,
+.kernel-section a {
+    display: inline-block;
+    padding: 14px 25px;
     color: white;
-    background: linear-gradient(135deg, #061a39, #0759bd);
-    border: 2px solid #66caff;
-    border-radius: 12px;
+    background: #0759bd;
+    border: 1px solid #66caff;
+    border-radius: 8px;
+    text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 0 25px #168cff;
-    transition: 0.3s;
 }
 
-#activateBtn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 45px #168cff;
-}
-
-#status {
-    margin-top: 20px;
+#status,
+#firmwareResult {
+    margin-top: 15px;
     color: #8bd6ff;
-    letter-spacing: 3px;
 }
 
 footer {
-    margin-top: 45px;
+    margin: 35px 0;
     font-size: 12px;
-    letter-spacing: 3px;
     color: #ccc;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 15px;
+        background-size: 100% auto;
+    }
+
+    .content {
+        margin-top: 75vw;
+    }
 }
